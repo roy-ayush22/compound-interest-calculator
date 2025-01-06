@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Compound Calculator</title>
+  </head>
+  <body>
+    <div class="wrapp">
+      <h1>Compund Interest Calculator</h1>
+      <div class="container">
+        <div>Principal Amount:</div>
+        <input type="text" placeholder="Enter amount" />
+        <div>Annual Interst Rate(%):</div>
+        <input type="text" name="interest" placeholder="Interest rate" />
+        <div>Time Period:</div>
+        <input type="text" placeholder="Time period" />
+        <div class="select">
+          <form action="submit">
+            <label for="">Compounding Frequency:</label>
+            <select name="time" id="">
+              <option>6 Month</option>
+              <option>1 Year</option>
+              <option>2 Year</option>
+              <option>3 Year</option>
+              <option>4 Year</option>
+            </select>
+          </form>
+        </div>
+        <button class="button">Calculate</button>
+        <div class="output"></div>
+      </div>
+    </div>
+  </body>
+</html>

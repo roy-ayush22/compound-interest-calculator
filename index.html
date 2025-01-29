@@ -3,35 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Compound Calculator</title>
   </head>
   <body>
-    <div class="wrapp">
-      <h1>Compund Interest Calculator</h1>
-      <div class="container">
-        <div>Principal Amount:</div>
-        <input type="text" placeholder="Enter amount" />
-        <div>Annual Interst Rate(%):</div>
-        <input type="text" name="interest" placeholder="Interest rate" />
-        <div>Time Period:</div>
-        <input type="text" placeholder="Time period" />
-        <div class="select">
-          <form action="submit">
-            <label for="">Compounding Frequency:</label>
-            <select name="time" id="">
-              <option>6 Month</option>
-              <option>1 Year</option>
-              <option>2 Year</option>
-              <option>3 Year</option>
-              <option>4 Year</option>
-            </select>
-          </form>
+    <div class="container">
+      <h1>Compound Calculate</h1>
+      <form id="interest-form">
+        <div class="input-group">
+          <label for="">Principal Amount(₹)</label>
+          <input
+            type="text"
+            name="principal-amount"
+            id="p-a"
+            placeholder="Enter principal amount"
+          />
         </div>
-        <button class="button" onclick="">Calculate</button>
-        <div class="output"></div>
+        <div class="input-group">
+          <label for="">Annual Interest Rate(%)</label>
+          <input
+            type="text"
+            name="annual-interset"
+            id="a-i"
+            placeholder="Enter annual interset rate"
+          />
+        </div>
+        <div class="input-group">
+          <label for="">Time Period(Years)</label>
+          <input
+            type="text"
+            name="time-period"
+            id="t-p"
+            placeholder="Enter time period"
+          />
+        </div>
+        <div class="input-group">
+          <label for="">Compound Frequency</label>
+          <select name="" id="frequency">
+            <option value="daily">Daily</option>
+            <option value="monthly">Monthly</option>
+            <option value="quaterly">Quarterly</option>
+            <option value="annually">Annually</option>
+            <option value="semi">Semi-Annually</option>
+          </select>
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="result" class="hidden">
+        <h2>Result:</h2>
+        <p>Final Amount: ₹<span id="final-amount"></span></p>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
